@@ -1,0 +1,27 @@
+{
+    "users" : [
+        {
+            "FirstName": "alice",
+            "LastName": "little",
+            "Img": "https://randomuser.me/api/portraits/men/29.jpg",
+            "Gender": "Female",
+            "Region": " United States",
+            "Phone":  "(270) 437 7719",
+            "Birthday":  "31/01/1990",
+            "Email":  "judy-tran@example.com",
+            "Password":  "Tran90}_"
+        },
+        {
+            "FirstName": "Gerald",
+            "LastName": "Stewart",
+            "Img": "https://randomuser.me/api/portraits/men/59.jpg",
+            "Gender": "Male",
+            "Region": " United States",
+            "Phone":  "(270) 437 7719",
+            "Birthday":  "31/01/1990",
+            "Email":  "judy-tran@example.com",
+            "Password":  "Tran90}_"
+        }
+    ]
+
+}
