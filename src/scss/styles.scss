@@ -1,11 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
 body{
     background-color: #8fc06c;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
 }
 
 h1{
     display: block;
-    text-align: center;
+    font-size: 72px;
     color: #fff;
+    font-weight: 600;
+    line-height: 100%;
+    text-align: center;
+    text-shadow: 0 5px 15px rgba(0,0,0,.15);
+    text-transform: uppercase;
+}
+
+label{
+    color: #999;
 }

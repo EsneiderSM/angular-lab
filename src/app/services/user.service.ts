@@ -5,12 +5,15 @@ import 'rxjs/add/operator/map';
 import { UserModel } from "../models/user.model";
 import { environment } from "../../environments/environment";
 
+import { AngularFireDatabase } from 'angularfire2/database'; 
+
 
 @Injectable()
 export class UserService{
 
     private apiURL: string = environment.APIURL;
     constructor(
+        private db: AngularFireDatabase,
         protected _http:Http
     ){}
 
@@ -19,6 +22,10 @@ export class UserService{
             .map(resp =>{
                 return resp.json().results[0]  as UserModel;
             });
+    }
+
+    getUserFireBase(listPath): Observable<any[]> {
+        return this.db.list(listPath).valueChanges();
     }
 
 }

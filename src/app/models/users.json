@@ -1,26 +1,59 @@
 {
     "users" : [
         {
-            "FirstName": "alice",
-            "LastName": "little",
-            "Img": "https://randomuser.me/api/portraits/men/29.jpg",
+            "FirstName": "Rebecca",
+            "LastName": "Martinez",
+            "Img": "https://uinames.com/api/photos/female/2.jpg",
             "Gender": "Female",
             "Region": " United States",
-            "Phone":  "(270) 437 7719",
-            "Birthday":  "31/01/1990",
-            "Email":  "judy-tran@example.com",
-            "Password":  "Tran90}_"
+            "Phone":  "(722) 866 8521",
+            "Birthday":  "05/01/1996",
+            "Email":  "rebecca_96@example.com",
+            "Password":  "Martinez96$"
         },
         {
-            "FirstName": "Gerald",
-            "LastName": "Stewart",
-            "Img": "https://randomuser.me/api/portraits/men/59.jpg",
+            "FirstName": "Dylan",
+            "LastName": "James",
+            "Img": "https://uinames.com/api/photos/male/11.jpg",
             "Gender": "Male",
             "Region": " United States",
-            "Phone":  "(270) 437 7719",
+            "Phone":  "(919) 575 7145",
             "Birthday":  "31/01/1990",
-            "Email":  "judy-tran@example.com",
-            "Password":  "Tran90}_"
+            "Email":  "dylan-james@example.com",
+            "Password":  "James82%&"
+        },
+        {
+            "FirstName": "Thomas",
+            "LastName": "Gomez",
+            "Img": "https://uinames.com/api/photos/male/12.jpg",
+            "Gender": "Male",
+            "Region": "United States",
+            "Phone":  "(167) 524 5724",
+            "Birthday":  "31/01/1990",
+            "Email":  "thomas.gomez@example.com",
+            "Password":  "Gomez91}*"
+        },
+        {
+            "FirstName": "Nicole",
+            "LastName": "Tran",
+            "Img": "https://uinames.com/api/photos/female/1.jpg",
+            "Gender": "Female",
+            "Region": "United States",
+            "Phone":  "(739) 901 7122",
+            "Birthday":  "31/01/1990",
+            "Email":  "nicole_tran@example.com",
+            "Password":  "Tran91$#"
+        },
+        {
+            "FirstName": "Bryan",
+            "LastName": "Gilbert",
+            "Img": "https://uinames.com/api/photos/male/6.jpg",
+            "Gender": "Male",
+            "Region": "United States",
+            "Phone":  "(739) 901 7122",
+            "Birthday":  "31/01/1990",
+            "Email":  "bryan-89@example.com",
+            "Password":  "Gilbert89}#"
         }
     ]
 

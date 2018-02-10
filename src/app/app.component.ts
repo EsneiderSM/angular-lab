@@ -2,7 +2,6 @@ import { Component, OnInit, HostListener } from '@angular/core';
 import { UserModel } from './models/user.model';
 import { UserService } from './services/user.service';
 
-import { AngularFireDatabase } from 'angularfire2/database'; 
 import { Observable } from 'rxjs/Observable';
 
 @Component({
@@ -14,34 +13,56 @@ import { Observable } from 'rxjs/Observable';
 export class AppComponent{
 
   user;
+  listUser: Array<UserModel[]>;
 
-  coursesObservable: Observable<any[]>;
+  uItem;
 
   constructor(
-    private db: AngularFireDatabase,
     protected _userService:UserService
-  ){}
-  
+  ){
+
+    this._userService.getUserFireBase("/users").subscribe(resp => {
+      this.listUser = resp;
+    });  
+  }
+
   @HostListener('window:keyup', ['$event'])
   keyEvent(event: KeyboardEvent) {
     if (event.keyCode === 32) {
+
+      this.user = this.getInfoUser();
+      console.log(this.user);
+
+      // this.listUserObservable.subscribe(items => {
+
+
+      //   items.forEach(item => {
+      //     console.log('Item:', item);
+      //   });
+
+      // })
+
+
       this.getInfoUser()
     }
   }
 
+
+
   getInfoUser(){
-    this._userService.getUser()
-      .subscribe(resp =>{
-        this.user = resp;
-      })
+
+    return this.listUser[Math.floor(Math.random()*this.listUser.length)];
+
+    // this._userService.getUser()
+    //   .subscribe(resp =>{
+    //     this.user = resp;
+    //   })
   }
 
   ngOnInit() {
-    this.coursesObservable = this.getCourses('/users');
-    console.log(this.user);
+  
   }
-  getCourses(listPath): Observable<any[]> {
-    return this.db.list(listPath).valueChanges();
-  }
+
+
 
 }

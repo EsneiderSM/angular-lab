@@ -1,32 +1,35 @@
-
 <div *ngIf="user === undefined">
   <h1>Press Spacebar</h1>
 </div>
 
 <div class="info" *ngIf="user">
-  <h1>{{ user?.name.first }} {{ user?.name.last }}</h1>
+    <h1>{{ user.FirstName }} {{ user.LastName }}</h1>
+  
+    <div class="info__card card">
+      <div class="card__info-left">
 
-  <div class="info__card">
-    <div>
-      <div class="">
-        <img [src]="user?.picture.medium" alt="">
+        <img [src]="user.Img" alt="">
+        <span>{{ user.FirstName }}</span>
+
       </div>
-      <span>{{ user?.name.first }}</span>
+  
+      <div>
+        <span> <label>Gender:</label> {{ user.Gender }}</span>
+        <br/>
+        <span><label>Region:</label> {{ user.Region }}</span>
+        <br/>
+        <span><label>Phone:</label> {{ user.Phone }}</span>
+        <br/>
+        <span><label>Birthday:</label> {{ user.Birthday }}</span>
+        <br/>
+        <span><label>Email:</label> {{ user.Email }}</span>
+        <br/>
+        <span><label>Password:</label> {{ user.Password }}</span>
+        <br/>
+      </div>
     </div>
-
-    <div>
-      <span>Gender: {{ user?.gender }}</span>
-      <br/>
-      <span>Region: {{ user?.location.state }}</span>
-      <br/>
-      <span>Phone: {{ user?.phone }}</span>
-      <br/>
-      <span>Birthday: </span>
-      <br/>
-      <span>Email: {{ user?.email }}</span>
-      <br/>
-      <span>Password: {{ user?.login.password }}</span>
-      <br/>
-    </div>
-  </div>
 </div>
+
+<div></div>
+
+
