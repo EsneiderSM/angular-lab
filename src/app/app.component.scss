@@ -2,11 +2,11 @@
 .info{
     .info__card{
         width: 380px;
-        margin: 0 auto;
         background-color: #fff;
         padding: 14px 20px;
         border-radius: 5px;
         box-shadow: 0 3px 10px rgba(0,0,0,.15);
+        margin: 1em auto;
     }
     .card{
         .card__info-left{
@@ -23,4 +23,19 @@
         }
     }
     
+}
+
+.form{
+    label{
+        text-align: left;
+        margin-bottom: .5em;
+    }
+    input,
+    select{
+        border: 0;
+        width: 100%;
+        margin-bottom: 1rem;
+        border-bottom: 1px solid #c3c3c3;
+        text-align: center;
+    }
 }

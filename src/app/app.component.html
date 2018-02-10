@@ -2,9 +2,11 @@
   <h1>Press Spacebar</h1>
 </div>
 
-<div class="info" *ngIf="user">
+<div class="info">
+
+  <div *ngIf="user">
     <h1>{{ user.FirstName }} {{ user.LastName }}</h1>
-  
+
     <div class="info__card card">
       <div class="card__info-left">
 
@@ -12,24 +14,87 @@
         <span>{{ user.FirstName }}</span>
 
       </div>
-  
+
       <div>
-        <span> <label>Gender:</label> {{ user.Gender }}</span>
+        <span>
+          <label>Gender:</label> {{ user.Gender }}</span>
         <br/>
-        <span><label>Region:</label> {{ user.Region }}</span>
+        <span>
+          <label>Region:</label> {{ user.Region }}</span>
         <br/>
-        <span><label>Phone:</label> {{ user.Phone }}</span>
+        <span>
+          <label>Phone:</label> {{ user.Phone }}</span>
         <br/>
-        <span><label>Birthday:</label> {{ user.Birthday }}</span>
+        <span>
+          <label>Birthday:</label> {{ user.Birthday }}</span>
         <br/>
-        <span><label>Email:</label> {{ user.Email }}</span>
+        <span>
+          <label>Email:</label> {{ user.Email }}</span>
         <br/>
-        <span><label>Password:</label> {{ user.Password }}</span>
+        <span>
+          <label>Password:</label> {{ user.Password }}</span>
         <br/>
       </div>
     </div>
+  </div>
+
+
+  <a href="javascript:void(0)" (click)="formAddUser()">Add user</a>
+
+  <div *ngIf="showForm === true" class="info__card form">
+
+    <form [formGroup]="myform" novalidate (ngSubmit)="onSubmit()">
+
+      <div class="form-group">
+        <label>First Name:</label>
+        <input type="text" class="form-control" formControlName="FirstName">
+      </div>
+      <div class="form-group">
+        <label>Last Name:</label>
+        <input type="text" class="form-control" formControlName="LastName">
+      </div>
+      <div class="form-group">
+        <label>Url Image:</label>
+        <input type="text" class="form-control" formControlName="Img">
+      </div>
+
+      <div class="form-group">
+        <label>Gender</label>
+        <select class="form-control" formControlName="Gender">
+          <option value="">--Please Select--</option>
+          <option *ngFor="let gender of genders" [value]="gender">{{ gender }}</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Region:</label>
+        <input type="text" class="form-control" formControlName="Region">
+      </div>
+
+      <div class="form-group">
+        <label>Phone:</label>
+        <input type="text" class="form-control" formControlName="Phone">
+      </div>
+
+      <div class="form-group">
+        <label>Birthday:</label>
+        <input type="text" class="form-control" formControlName="Birthday">
+      </div>
+
+      <div class="form-group">
+        <label>Email:</label>
+        <input type="email" class="form-control has-success" formControlName="Email">
+      </div>
+
+      <div class="form-group">
+        <label>Password:</label>
+        <input type="password" class="form-control" formControlName="Password">
+      </div>
+
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+  </div>
+
 </div>
-
-<div></div>
-
-

@@ -12,6 +12,7 @@ import { AngularFireDatabase } from 'angularfire2/database';
 export class UserService{
 
     private apiURL: string = environment.APIURL;
+    private listPath: string = "/users";
     constructor(
         private db: AngularFireDatabase,
         protected _http:Http
@@ -24,8 +25,13 @@ export class UserService{
             });
     }
 
-    getUserFireBase(listPath): Observable<any[]> {
-        return this.db.list(listPath).valueChanges();
+    getUserFireBase(): Observable<any[]> {
+        return this.db.list(this.listPath).valueChanges();
     }
+
+    postUser(item: UserModel){
+        this.db.list(this.listPath).push(item);
+    }
+    
 
 }
